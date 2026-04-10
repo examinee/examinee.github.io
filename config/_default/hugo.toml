@@ -17,6 +17,7 @@ theme = "hugo-theme-terminal"
   centerTheme = true
   autoCover = true
   showLastUpdated = true
+  customCSS = ["/css/custom.css"]
 
   # 한국어 UI 텍스트
   [params.logo]
