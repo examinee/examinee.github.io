@@ -1,103 +1,112 @@
 /* ===== 0xPat 스타일 커스터마이징 ===== */
 
-/* 배경색 + 기본 색상 오버라이드 */
+/* 배경색: 순수 검은색 계열 */
 :root {
-  --background: #1a1a1d !important;
-  --color: #c9cacc !important;
-  --accent: #6fc3df !important;
-  --border-color: #333 !important;
+  --background: #0d1117 !important;
+  --color: #c9d1d9 !important;
+  --accent: #58a6ff !important;
+  --border-color: #21262d !important;
 }
 
 body {
-  background: #1a1a1d !important;
-  color: #c9cacc !important;
+  background: #0d1117 !important;
+  color: #c9d1d9 !important;
 }
 
-/* 본문 폰트: 모노스페이스 → 산세리프 */
+/* 본문 폰트: 산세리프 */
 body,
 .post-content,
 .post-content p,
 .post-content li,
-.post-content blockquote,
-.post-title,
-h1, h2, h3, h4, h5, h6,
-.menu a,
-.footer {
+.post-content blockquote {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+  line-height: 1.8;
 }
 
-/* 코드 블록만 모노스페이스 유지 */
-code,
-pre,
-pre code,
+/* 제목 폰트 */
+h1, h2, h3, h4, h5, h6,
+.post-title {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+  color: #e6edf3 !important;
+}
+
+/* 코드만 모노스페이스 */
+code, pre,
 .post-content code,
 .post-content pre {
-  font-family: "Fira Code", "JetBrains Mono", "Consolas", "Monaco", monospace !important;
-}
-
-/* 로고 텍스트는 모노스페이스 유지 */
-.logo__text,
-.logo a {
   font-family: "Fira Code", "JetBrains Mono", "Consolas", monospace !important;
 }
 
-/* 링크 색상 — 0xPat 스타일 시안 */
-a {
-  color: #6fc3df !important;
+/* 로고 모노스페이스 유지 */
+.logo__text, .logo a {
+  font-family: "Fira Code", "JetBrains Mono", "Consolas", monospace !important;
+  color: #58a6ff !important;
 }
 
-a:hover {
-  color: #50fa7b !important;
+/* 메뉴 */
+.menu a {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+  color: #58a6ff !important;
 }
 
-/* 제목 색상 */
-h1, h2, h3, h4 {
-  color: #e2e4e8 !important;
-}
+/* ===== 장식 제거 ===== */
+.container { border: none !important; }
+.post { border: none !important; padding: 0 !important; margin-bottom: 2em !important; }
+.framed { border: none !important; }
+.header { border-bottom: 1px solid #21262d !important; }
+.header::after, .header::before { display: none !important; }
+.post + .post { border-top: 1px solid #21262d !important; }
 
-/* 글 제목 */
-.post-title {
-  font-size: 1.6em;
-  font-weight: 700;
-}
+/* ===== 링크 ===== */
+a { color: #58a6ff !important; text-decoration: none !important; }
+a:hover { color: #79c0ff !important; text-decoration: underline !important; }
 
-/* 본문 줄간격 */
-.post-content {
-  line-height: 1.8;
-  font-size: 1.05em;
-}
-
-/* 점선 테두리 → 실선으로 변경, 얇게 */
-.content {
-  border-color: #333 !important;
-}
-
-/* 인라인 코드 스타일 */
-.post-content code:not(pre code) {
-  background: #282a36 !important;
-  color: #f8f8f2 !important;
-  padding: 2px 6px;
-  border-radius: 3px;
-  font-size: 0.9em;
-}
-
-/* 코드 블록 배경 */
+/* ===== 코드 블록 ===== */
 pre {
-  background: #282a36 !important;
-  border-radius: 6px;
+  background: #161b22 !important;
+  border: 1px solid #21262d !important;
+  border-radius: 6px !important;
+  padding: 16px !important;
+}
+.post-content code:not(pre code) {
+  background: #21262d !important;
+  padding: 2px 6px !important;
+  border-radius: 3px !important;
+  font-size: 0.9em !important;
+  color: #e6edf3 !important;
 }
 
-/* 메뉴/네비게이션 배경 */
-.menu {
-  background: transparent !important;
+/* ===== 글 제목 ===== */
+.post-title { font-size: 1.8em !important; font-weight: 600 !important; }
+
+/* ===== 메타/날짜 ===== */
+.post-meta, .post-date {
+  color: #8b949e !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
 }
 
-/* 포스트 경계선 얇게 */
-.post {
-  border-color: #333 !important;
+/* ===== 태그 ===== */
+.post-tags a, .tag {
+  color: #58a6ff !important;
+  border: 1px solid #30363d !important;
+  border-radius: 3px !important;
+  padding: 2px 8px !important;
+  font-size: 0.85em !important;
 }
 
-/* footer */
+/* ===== Footer ===== */
 .footer {
-  color: #666 !important;
+  border-top: 1px solid #21262d !important;
+  color: #8b949e !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+}
+
+/* ===== 레이아웃 ===== */
+.container { max-width: 800px !important; }
+
+/* 블록쿼트 */
+blockquote {
+  border-left: 3px solid #58a6ff !important;
+  color: #8b949e !important;
+  padding-left: 1em !important;
 }
