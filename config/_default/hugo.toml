@@ -3,7 +3,9 @@ languageCode = "ko-KR"
 defaultContentLanguage = "ko"
 title = "examinee"
 theme = "hugo-theme-terminal"
-paginate = 5
+
+[pagination]
+  pagerSize = 5
 
 [params]
   # Terminal theme settings
