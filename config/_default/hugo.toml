@@ -1,0 +1,76 @@
+baseURL = "https://examinee.github.io/"
+languageCode = "ko-KR"
+defaultContentLanguage = "ko"
+title = "examinee"
+theme = "hugo-theme-terminal"
+paginate = 5
+
+[params]
+  # Terminal theme settings
+  contentTypeName = "posts"
+  themeColor = "green"
+  showMenuItems = 3
+  showLanguageSelector = false
+  fullWidthTheme = false
+  centerTheme = true
+  autoCover = true
+  showLastUpdated = true
+
+  # 한국어 UI 텍스트
+  [params.logo]
+    logoText = "examinee@blog:~$"
+    logoHomeLink = "/"
+
+  [params.twitter]
+    creator = ""
+
+[languages]
+  [languages.ko]
+    languageName = "한국어"
+    title = "examinee"
+    subtitle = "Reverse Engineering & Malware Analysis"
+    owner = "examinee"
+    keywords = "reverse-engineering, malware-analysis, windows-internals, security"
+    copyright = ""
+    menuMore = "더 보기"
+    readMore = "더 읽기"
+    readOtherPosts = "다른 글 읽기"
+    newerPosts = "새로운 글"
+    olderPosts = "이전 글"
+    missingContentMessage = "페이지를 찾을 수 없습니다."
+    [languages.ko.params.logo]
+      logoText = "examinee@blog:~$"
+      logoHomeLink = "/"
+
+    [[languages.ko.menu.main]]
+      identifier = "about"
+      name = "소개"
+      url = "/about"
+      weight = 1
+
+    [[languages.ko.menu.main]]
+      identifier = "posts"
+      name = "글"
+      url = "/posts"
+      weight = 2
+
+    [[languages.ko.menu.main]]
+      identifier = "tags"
+      name = "태그"
+      url = "/tags"
+      weight = 3
+
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+
+[markup]
+  [markup.highlight]
+    codeFences = true
+    guessSyntax = false
+    lineNos = false
+    noClasses = false
+    style = "monokai"
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
